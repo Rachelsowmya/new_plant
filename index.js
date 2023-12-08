@@ -4,6 +4,7 @@ const path = require('path');
 const { MongoClient } = require('mongodb'); // Add this line to import MongoClient
 
 http.createServer((req, res) => {
+        res.setHeader("Access-Control-Allow-origin","*");
     console.log(req.url);
     if (req.url === '/') {
         // home page
